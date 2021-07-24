@@ -1,46 +1,7 @@
-server:
-  port: 6636
-
-
-logging:
-  level:
-    root: error
-
-
 spring:
-  #dbcofig
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    #    schema: classpath:db/schema-h2.sql
-    #    data: classpath:db/data-h2.sql
-    url: jdbc:mysql://localhost:3306/campus_wall?useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
-    username: root
-    password: 34rt5ty4yss.
+  profiles:
+    active: dev
 
-  #redis
-  redis:
-    host: 127.0.0.1
-    port: 6379
-    password: jj39gesge.
-
-  #mail
-  mail:
-    host: smtp.qq.com
-    port: 465
-    username: pmj136@foxmail.com
-    password: xurpboglqvxxjaeh
-    properties:
-      mail:
-        smtp:
-          ssl:
-            trust: smtp.qq.com
-          socketFactory:
-            class: javax.net.ssl.SSLSocketFactory
-            port: 465
-            auth: true
-            starttls:
-              enable: true
-              required: true
 
 #mybatis
 mybatis-plus:
@@ -52,3 +13,11 @@ mybatis-plus:
     #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
     call-setters-on-nulls: true
+
+#http://sa-token.dev33.cn/doc/index.html#/use/config?id=%e6%89%80%e6%9c%89%e5%8f%af%e9%85%8d%e7%bd%ae%e9%a1%b9
+sa-token:
+  token-name: token
+  timeout: -1
+  activity-timeout: 86400
+  is-concurrent: false
+  token-style: tik
