@@ -1,4 +1,4 @@
-package com.pmj.api.component;
+package com.example.featdemo.component;
 
 import org.springframework.stereotype.Component;
 
@@ -8,10 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Arrays;
 
-/**
- * @author 彭明久
- * @since 2021-03-19
- */
 @Component
 public class CorsFilter implements Filter {
     @Override
@@ -20,9 +16,8 @@ public class CorsFilter implements Filter {
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
         String[] allowDomains = {
                 "https://pmj136.top",
-                "https://manage.pmj136.top",
-                "http://localhost:9527",
-                "http://localhost:8527"
+                "http://localhost:9979",
+                "http://localhost:5000"
         };
         String originHeads = req.getHeader("Origin");
         if (Arrays.asList(allowDomains).contains(originHeads))

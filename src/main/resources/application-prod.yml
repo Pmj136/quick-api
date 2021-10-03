@@ -1,20 +1,17 @@
 server:
-  port: 5901
-
-logging:
-  level:
-    root: off
+  port: 5000
 
 spring:
-  #dbcofig
+  main:
+    log-startup-info: false
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: url
-    username: username
-    password: password
+    url: jdbc:mysql://localhost:3306/jju_assistant?useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
 
   #redis
   redis:
-    host: host
+    host: 127.0.0.1
     port: 6379
-    password: password
+    password: jj39gesge.

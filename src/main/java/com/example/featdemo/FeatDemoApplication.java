@@ -1,11 +1,13 @@
-package com.pmj.api;
+package com.example.featdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApiApplication {
+public class FeatDemoApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(ApiApplication.class, args);
+        SpringApplication.run(FeatDemoApplication.class, args);
     }
+
 }
